@@ -47,5 +47,8 @@ Scrape.py:
         2) The folder constitue of files and folders
         3) Inside the main project there is directory for spider
           In scrapynykaa/scrapynykaa/spiders create file name called scrap_nykaa.py
-        4) Copy the contents from file and paste it. It will parse all data with
+        4) Copy the contents from file and paste it. 
+        5) Run command: scrapy crawl scrapper 
+        6) It will parse all data with
           product-id, image-link, and product-title and store it in monogdb.
+          
