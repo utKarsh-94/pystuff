@@ -46,7 +46,7 @@ Scrape.py:
         1) scrapy startproject scrapnykaa
         2) The folder constitue of files and folders
         3) Inside the main project there is directory for spider
-          In scrapynykaa/scrapynykaa/spiders create file name called scrap_nykaa.py
+          In scrapynykaa/scrapynykaa/spiders create file name called scrapper.py
         4) Copy the contents from file and paste it. 
         5) Run command: scrapy crawl scrapper 
         6) It will parse all data with
