@@ -5,7 +5,7 @@ from pymongo import MongoClient
 
 class ScrapNykaa(scrapy.Spider):
 
-    name = "scrap_nykaa"
+    name = "scrapper"
 
     def start_requests(self):
         for i in range(1, 25):
@@ -27,13 +27,7 @@ class ScrapNykaa(scrapy.Spider):
             img_attr_a = img_attr.find('a', class_='product-image')
             product_title = img_attr_a.get('title')
             img_link = img_attr_a.find('img', class_='lazy').get('data-original')
-            # print('{"product-id-' + product_name + '":"' + img_link + '"}')
-            # print(
-            #     '{ "product_id":"product_id_' + product_name + '", "img_link":"' + img_link + '", "product_title":"' + product_title + '" }')
-            #post_info = { "product_id":"product_id_" + product_name + """, "img_link":""" + img_link + """, "product_title":""" + product_title + """ }
             post_info = {"product_id": "product_id_" + str(product_name) + "", "img_link":"" + img_link + "", "product_title":"" + product_title + "" }
-            # with open('/home/shashi/Desktop/r.json', 'a+') as f:
-            #     f.write(post_info)
             self.mongo_db_credentials(post_info)
 
     def mongo_db_credentials(self, post_data):
